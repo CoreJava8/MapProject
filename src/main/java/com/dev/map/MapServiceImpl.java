@@ -13,7 +13,7 @@ import java.util.stream.Stream;
 public class MapServiceImpl {
 
     public static Map getResultantObjects() {
-        List historiesList = Arrays.asList(getMapObject(TestDataGenerator.getData1()), getMapObject(TestDataGenerator.getData2()), getMapObject(TestDataGenerator.dupli_getData1()));
+        List historiesList = Arrays.asList(getMapObject(TestDataGenerator.getData1()), getMapObject(TestDataGenerator.getData2()), getMapObject(TestDataGenerator.getData3()));
         Map chargeHistoryMap = new HashMap();
         historiesList.stream().forEach(chargeHistory -> manipulate((Map) chargeHistory, chargeHistoryMap));
         return chargeHistoryMap;
