@@ -53,6 +53,10 @@ amount = 400.0
 
 
 
+
+
+
+
 **With different objects:**
 List historiesList = Arrays.asList(getMapObject(TestDataGenerator.getData1()), getMapObject(TestDataGenerator.getData2()), getMapObject(TestDataGenerator.getData3()));
 
