@@ -3,20 +3,25 @@ package com.dev.map;
 import com.dev.map.model.ChargeHistory;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class MapServiceImpl {
 
-    public static Map getResultantObjects() {
-        List historiesList = Arrays.asList(getMapObject(TestDataGenerator.getData1()), getMapObject(TestDataGenerator.getData2()), getMapObject(TestDataGenerator.getData3()));
+    public static List getResultantObjects() {
+        List historiesList = getTestData();
         Map chargeHistoryMap = new HashMap();
         historiesList.stream().forEach(chargeHistory -> manipulate((Map) chargeHistory, chargeHistoryMap));
-        return chargeHistoryMap;
+        List finalResult = new ArrayList(chargeHistoryMap.values());
+        return finalResult;
+    }
+
+    private static List getTestData(){
+        List historiesList_1 = new ArrayList(Arrays.asList(getMapObject(TestDataGenerator.getData1()), getMapObject(TestDataGenerator.getData2()), getMapObject(TestDataGenerator.getData3())));
+        List historiesList_2 = new ArrayList(Arrays.asList(getMapObject(TestDataGenerator.getData1()), getMapObject(TestDataGenerator.getData2()), getMapObject(TestDataGenerator.dupli_getData1())));
+        historiesList_1.addAll(historiesList_2);
+        return historiesList_1;
     }
 
     private static Map<String, Object> getMapObject(ChargeHistory chargeHistory) {

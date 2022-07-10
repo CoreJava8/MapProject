@@ -3,6 +3,7 @@ package com.dev.map;
 import com.dev.map.model.ChargeHistory;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+import java.util.List;
 import java.util.Map;
 
 public class MapTester {
@@ -13,7 +14,7 @@ public class MapTester {
         System.out.println("===========");
         System.out.println();
 
-        Map<String, ChargeHistory> finalMap_map = MapServiceImpl.getResultantObjects();
-        System.out.println(finalMap_map);
+        List finalList = MapServiceImpl.getResultantObjects();
+        System.out.println(finalList);
     }
 }

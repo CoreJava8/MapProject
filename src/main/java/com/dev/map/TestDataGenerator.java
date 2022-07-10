@@ -95,12 +95,12 @@ public class TestDataGenerator {
     public static ChargeHistory dupli_getData1(){
         Modifier modifier_1 =  new Modifier();
         modifier_1.setId(1);
-        modifier_1.setName("Mod1");
+        modifier_1.setName("Mod9");
         modifier_1.setAmount(100.00);
 
         Modifier modifier_2 =  new Modifier();
         modifier_2.setId(2);
-        modifier_2.setName("Mod2");
+        modifier_2.setName("Mod10");
         modifier_2.setAmount(200.00);
 
         Modifier modifier_3 =  new Modifier();
